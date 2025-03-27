@@ -1,9 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from pyspark.ml.recommendation import ALSModel
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, expr, concat, lit
 import pandas as pd
-import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity

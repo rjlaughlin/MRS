@@ -5,7 +5,7 @@ let moviesList = [];
 //     '<img src="https://image.tmdb.org/t/p/original/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg" width="150px">';
 
 function loadMovies() {
-    fetch("http://127.0.0.1:5000/movies")
+    fetch("https://mrs-dc39.onrender.com/movies")
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -159,7 +159,7 @@ async function getRecommendations() {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/recommend", {
+        const response = await fetch("https://mrs-dc39.onrender.com/recommend", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ movies: Array.from(selectedMovies) })
